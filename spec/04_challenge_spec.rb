@@ -1,14 +1,10 @@
+
 require_relative 'spec_helper'
-require_relative '../lib/fourth_challenge.rb'
+require_relative '../lib/bonus.rb'
 
-describe "#fourth_challenge" do
-	it "fills out the Montague hero's friends array with" do
-    expect(fourth_challenge[:montague][:hero_friends]).to match_array([{name: "Benvolio", age: "17", attitude: "worried"}, {name: "Mercutio", age: "18", attitude: "hot-headed"}])
-
-  end
-
-  it "fills out the Capulet heroine's friends array with" do
-    expect(fourth_challenge[:capulet][:heroine_friends]).to match_array([{name: "Steven", age: "30", attitude: "confused"}, {name: "Nurse", age: "44", attitude: "worried"}])
-
-  end
+describe "#bonus" do
+	it "uses the []= method to change the hero and heroine's status from alive to dead" do
+	   expect(bonus[:montague][:hero][:status]).to eq("dead")
+	   expect(bonus[:capulet][:heroine][:status]).to eq("dead")
+	end
 end
